@@ -13,7 +13,8 @@ class View{
 
   static listCommand(listData){
     for(let i=0;i<listData.length;i++){
-      console.log(`${listData[i].id}. [${listData[i].status}] ${listData[i].activity}`);
+      let list = listData[i]
+      console.log(`${list.id}. [${list.status}] ${list.activity} tags : ${list.tags}`);
     }
   }
 
@@ -25,6 +26,14 @@ class View{
   }
   static deleteCommand(deleteData){
     console.log(`Deleted ${deleteData} from your TODO list`);
+  }
+
+  static tagCommand(tagData,tagNames){
+    let tagInfo = '';
+    for(let i=0;i<tagNames.length;i++){
+      tagInfo = tagInfo + tagNames[i] + ' ';
+    }
+    console.log(`Tagged task ${tagData} with tags: ${tagInfo.substr(0,tagInfo.length-1)}`);
   }
 }
 
