@@ -7,10 +7,42 @@ class ToDoModel {
     ToDoView.help()
   }
 
-  static list(callback){
+  static list(input,callback){
     fs.readFile('./todolist.json','utf8',(err,data) => {
       let toDoList = JSON.parse(data)
-      callback(toDoList);
+      if(input==undefined){
+        callback(toDoList);
+      } else if(input=='created'){
+        for(let i=1; i<toDoList.length; i++){
+          for(let j=0; j<=i-1; j++){
+            let front = toDoList[j]
+            let back = toDoList[i]
+            if(toDoList[i].createdAt<toDoList[j].createdAt){
+              toDoList[i] = front
+              toDoList[j] = back
+            }
+          }
+        }
+        callback(toDoList)
+      } else if(input=='completed'){
+        let completedTask = []
+        for(let i=0; i<toDoList.length; i++){
+          if(toDoList[i].status=='[X]'){
+            completedTask.push(toDoList[i])
+          }
+        }
+        for(let i=1; i<completedTask.length; i++){
+          for(let j=0; j<=i-1; j++){
+            let front = completedTask[j]
+            let back = completedTask[i]
+            if(completedTask[i].completedAt<completedTask[j].completedAt){
+              completedTask[i] = front
+              completedTask[j] = back
+            }
+          }
+        }
+        callback(completedTask)
+      }
     })
   }
 
@@ -40,7 +72,7 @@ class ToDoModel {
       let toDoList = JSON.parse(data)
       let newArray = [];
       for(let i=0; i<toDoList.length; i++){
-        if((i+1).toString()==argv[3]){
+        if(toDoList[i].id.toString()==argv[3]){
           var erasedData = toDoList[i]
           newArray.push(toDoList[i])
           newArray.pop()
@@ -60,7 +92,7 @@ class ToDoModel {
     fs.readFile('./todolist.json','utf8',(err,data) => {
       let toDoList = JSON.parse(data)
       for(let i=0; i<toDoList.length; i++){
-        if((i+1).toString()==argv[3]){
+        if(toDoList[i].id.toString()==argv[3]){
           toDoList[i].status = '[X]'
           toDoList[i].completedAt = new Date()
         }
@@ -77,7 +109,7 @@ class ToDoModel {
     fs.readFile('./todolist.json','utf8',(err,data) => {
       let toDoList = JSON.parse(data)
       for(let i=0; i<toDoList.length; i++){
-        if((i+1).toString()==argv[3]){
+        if(toDoList[i].id.toString()==argv[3]){
           toDoList[i].status = '[ ]'
         }
       }
@@ -86,46 +118,6 @@ class ToDoModel {
         if (err) throw err
         callback(argv[3])
       })
-    })
-  }
-
-  static listCreated(callback){
-    fs.readFile('./todolist.json','utf8',(err,data) => {
-      let toDoList = JSON.parse(data)
-      for(let i=1; i<toDoList.length; i++){
-        for(let j=0; j<=i-1; j++){
-          let front = toDoList[j]
-          let back = toDoList[i]
-          if(toDoList[i].createdAt<toDoList[j].createdAt){
-            toDoList[i] = front
-            toDoList[j] = back
-          }
-        }
-      }
-      callback(toDoList)
-    })
-  }
-
-  static listCompleted(callback){
-    fs.readFile('./todolist.json','utf8',(err,data) => {
-      let toDoList = JSON.parse(data)
-      let completedTask = []
-      for(let i=0; i<toDoList.length; i++){
-        if(toDoList[i].status=='[X]'){
-          completedTask.push(toDoList[i])
-        }
-      }
-      for(let i=1; i<completedTask.length; i++){
-        for(let j=0; j<=i-1; j++){
-          let front = completedTask[j]
-          let back = completedTask[i]
-          if(completedTask[i].completedAt<completedTask[j].completedAt){
-            completedTask[i] = front
-            completedTask[j] = back
-          }
-        }
-      }
-      callback(completedTask)
     })
   }
 

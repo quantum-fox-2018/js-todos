@@ -11,11 +11,23 @@ class ToDoView {
     console.log(`node todo.js uncomplete <task_id>`);
     console.log(`node todo.js list:created asc|desc`);
     console.log(`node todo.js list:completed asc|desc`);
+    console.log(`node todo.js tag <task_id> <tag_1> <tag_2> ... <tag_n>`);
+    console.log(`node todo.js filter:<tag>`);
   }
 
   static list(input){
-    for(let i=0; i<input.length; i++){
-      console.log(`${i+1}. ${input[i].status} ${input[i].task}`);
+    if(argv[3]=='asc'){
+      for(let i=0; i<input.length; i++){
+        console.log(`${input[i].id}. ${input[i].status} ${input[i].task}`);
+      }
+    } else if(argv[3]=='desc') {
+      for(let i=input.length-1; i>=0; i--){
+        console.log(`${input[i].id}. ${input[i].status} ${input[i].task}`);
+      }
+    } else {
+      for(let i=0; i<input.length; i++){
+        console.log(`${input[i].id}. ${input[i].status} ${input[i].task}`);
+      }
     }
   }
 
@@ -26,7 +38,7 @@ class ToDoView {
   static findById(num,input){
     for(let i=0; i<input.length; i++){
       if(input[i].id==num){
-        console.log(`${i+1}. ${input[i].status} ${input[i].task}`)
+        console.log(`${input[i].id}. ${input[i].status} ${input[i].task}`)
       }
     }
   }
@@ -41,30 +53,6 @@ class ToDoView {
 
   static uncomplete(input){
     console.log(`Data ke-${input} belum selesai!`)
-  }
-
-  static listCreated(input){
-    if(argv[3]=='asc'){
-      for(let i=0; i<input.length; i++){
-        console.log(`${i+1}. ${input[i].status} ${input[i].task}`);
-      }
-    } else if(argv[3]=='desc') {
-      for(let i=input.length-1; i>=0; i--){
-        console.log(`${i+1}. ${input[i].status} ${input[i].task}`);
-      }
-    }
-  }
-
-  static listCompleted(input){
-    if(argv[3]=='asc'){
-      for(let i=0; i<input.length; i++){
-        console.log(`${i+1}. ${input[i].status} ${input[i].task}`);
-      }
-    } else if(argv[3]=='desc') {
-      for(let i=input.length-1; i>=0; i--){
-        console.log(`${i+1}. ${input[i].status} ${input[i].task}`);
-      }
-    }
   }
 
   static tags(name,tags){

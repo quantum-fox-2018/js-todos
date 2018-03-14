@@ -13,10 +13,10 @@
   },
   {
     "id": 2,
-    "status": "[ ]",
+    "status": "[X]",
     "task": "Wash My Car",
     "createdAt": "2018-03-14T08:17:32.679Z",
-    "completedAt": "2018-03-14T08:17:32.679Z",
+    "completedAt": "2018-03-14T09:06:49.046Z",
     "tags": [
       "wash",
       "vehicle"
@@ -27,7 +27,7 @@
     "status": "[ ]",
     "task": "Wash My Clothes",
     "createdAt": "2018-03-14T08:29:23.552Z",
-    "completedAt": "2018-03-14T08:29:23.552Z",
+    "completedAt": "2018-03-14T09:08:57.284Z",
     "tags": [
       "wash",
       "clothes",
@@ -36,13 +36,24 @@
   },
   {
     "id": 4,
-    "status": "[ ]",
+    "status": "[X]",
     "task": "Clean My House",
     "createdAt": "2018-03-14T08:56:15.305Z",
-    "completedAt": "2018-03-14T08:56:15.305Z",
+    "completedAt": "2018-03-14T09:06:56.414Z",
     "tags": [
       "clean",
       "house"
+    ]
+  },
+  {
+    "id": 5,
+    "status": "[ ]",
+    "task": "Sleep",
+    "createdAt": "2018-03-14T09:21:08.422Z",
+    "completedAt": "2018-03-14T09:21:08.422Z",
+    "tags": [
+      "bed",
+      "room"
     ]
   }
 ]
