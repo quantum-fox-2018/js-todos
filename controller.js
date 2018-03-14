@@ -1,4 +1,5 @@
 const ViewTodo = require('./view.js')
+const ModelTodo = require('./model.js')
 
 
 class ControllTodo {
@@ -7,6 +8,7 @@ class ControllTodo {
     }
 
     static checkSyntax(syntax, value){
+        let task = value.join(' ')
         switch(syntax){
             default:
                 console.log('you will can "help"')
@@ -30,19 +32,21 @@ class ControllTodo {
                 break;
             
             case 'add':
-                console.log('menambahkan task')
+                ModelTodo.addList(task)
                 break;
             case 'findById':
-                console.log('mencari task by ID')
+                let data = ModelTodo.findId(task)
+                ViewTodo.viewId(data)
+                
                 break;
             case 'delete':
-                console.log('menghapus task id')
+                ModelTodo.deleteTask(task)
                 break;
             case 'complete':
-                console.log('merubah status task jadi complete')
+                ModelTodo.taskCompleted(task)
                 break;
             case 'uncomplete':
-                console.log('merubah status task jadi uncomplete')
+                ModelTodo.taskUncomplete(task)
                 break;
         }   
     }

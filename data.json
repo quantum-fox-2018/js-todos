@@ -1,1 +1,27 @@
-[{"id":1,"task":"Bikin Aplikasi"},{"id":2,"task":"Main Node.js"}]
+[
+  {
+    "id": 1,
+    "status": "uncomplete",
+    "task": "Bikin Aplikasi"
+  },
+  {
+    "id": 2,
+    "status": "completed",
+    "task": "Main Node.js"
+  },
+  {
+    "id": 3,
+    "status": "completed",
+    "task": "Membuat Todo List"
+  },
+  {
+    "id": 4,
+    "status": "completed",
+    "task": "Belajar OOP Javascript"
+  },
+  {
+    "id": 5,
+    "status": "uncomplete",
+    "task": "Belajar MVC Javascript"
+  }
+]
