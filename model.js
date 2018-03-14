@@ -158,6 +158,34 @@ class Model {
     return result;
   }
 
+  static getToDoByTag(option){
+    let to_do_list = fs.readFileSync('data.json','utf8');
+    to_do_list = JSON.parse(to_do_list);
+    console.log(option);
+
+    let indexOfToDot = option.indexOf(':');
+    let option2 = option.substring(indexOfToDot+1);
+    let option1 = option.slice(0,indexOfToDot);
+
+    if(option1 === 'filter'){
+      let to_do_formatted = to_do_list.todolist;
+      let tempToDoListArray = [];
+      for(let index in to_do_formatted){
+        for(let indexTag in to_do_formatted[index].tags){
+          if(to_do_formatted[index].tags[indexTag] === option2)
+          tempToDoListArray.push(to_do_formatted[index]);
+        }
+      }
+      tempToDoListArray.sort(function(a, b) {
+        var dateA = new Date(a.created_at), dateB = new Date(b.created_at);
+        return dateB - dateA;
+      });
+      to_do_list.todolist = tempToDoListArray;
+    }
+
+    return to_do_list;
+  }
+
 }
 
 module.exports = Model;

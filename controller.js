@@ -37,7 +37,12 @@ class Controller{
 
   static addToDoTag(new_to_do_tag){
     (model.addToDoTag(new_to_do_tag)) ? view.showSucsess('tag') : view.showFailure('tag');
-  }  
+  }
+
+  static findByTags(option){
+    let to_do_list = model.getToDoByTag(option);
+    view.showToDos(to_do_list);
+  }
 }
 
 module.exports = Controller;

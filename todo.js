@@ -33,7 +33,8 @@ switch(process.argv[2]){
   case 'tag' :
     (process.argv[3]) ? controller.addToDoTag(process.argv) : console.log('Tolong isi tag to-do yang ingin disimpan');
     break;
-  case 'filter' :
-    (process.argv[3]) ? controller.getToDos('filter', process.argv[3]) : console.log('Tolong isi tag to-do yang ingin disimpan');
-    break;
+}
+
+if(process.argv[2].includes('filter') === true){
+  controller.findByTags(process.argv[2]);
 }
