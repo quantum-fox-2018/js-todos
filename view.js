@@ -40,6 +40,9 @@ class View {
       case 'complete':
         message = 'mengganti tanda to-do'
         break;
+      case 'tag':
+        message = 'menambah tag to-do'
+        break;
     }
     console.log(`Berhasil ${message}`);
   }
@@ -58,6 +61,9 @@ class View {
         break;
       case 'complete':
         message = 'mengganti tanda to-do'
+        break;
+      case 'tag':
+        message = 'menambah tag to-do'
         break;
     }
     console.log(`Gagal ${message}`);

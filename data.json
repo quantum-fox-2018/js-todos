@@ -3,27 +3,72 @@
     {
       "id": 1,
       "content": "sarapan di rumah mba ike",
-      "complete": true
+      "complete": true,
+      "created_at": "2018-03-14T08:15:25.966Z",
+      "tags": [
+        "santai",
+        "makan"
+      ]
     },
     {
       "id": 2,
       "content": "jalan ke sekolah",
-      "complete": false
+      "complete": false,
+      "created_at": "2018-03-14T03:15:25.966Z",
+      "tags": [
+        "darurat",
+        "sekolah"
+      ]
     },
     {
       "id": 3,
       "content": "latihan ekskul band",
-      "complete": false
+      "complete": false,
+      "created_at": "2018-03-14T05:15:25.966Z",
+      "tags": [
+        "santai",
+        "sekolah"
+      ]
     },
     {
       "id": 4,
       "content": "beli hadiah buat adek",
-      "complete": false
+      "complete": false,
+      "created_at": "2018-03-14T02:15:25.966Z",
+      "tags": [
+        "darurat",
+        "keluarga"
+      ]
     },
     {
       "id": 5,
       "content": "suprise adek bareng bunda",
-      "complete": false
+      "complete": false,
+      "created_at": "2018-03-14T07:15:25.966Z",
+      "tags": [
+        "darurat",
+        "keluarga"
+      ]
+    },
+    {
+      "id": 6,
+      "content": "tiduran sambil baca komik",
+      "complete": true,
+      "created_at": "2018-03-14T09:15:25.966Z",
+      "tags": [
+        "santai",
+        "hobi"
+      ]
+    },
+    {
+      "id": 7,
+      "content": "bangun pagi, mandi",
+      "complete": true,
+      "created_at": "2018-03-14T09:24:03.407Z",
+      "tags": [
+        "darurat",
+        "rumah"
+      ]
     }
   ]
 }

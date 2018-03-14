@@ -11,8 +11,8 @@ class Controller{
     view.showHelp(help_list);
   }
 
-  static getToDos(){
-    let to_do_list = model.getToDoList();
+  static getToDos(option1,option2){
+    let to_do_list = model.getToDoList(option1,option2);
     view.showToDos(to_do_list);
   }
 
@@ -34,6 +34,10 @@ class Controller{
     let to_do = model.markToDoById(to_do_id,markType);
     (to_do) ? view.showSucsess('complete') : view.showFailure('complete');
   }
+
+  static addToDoTag(new_to_do_tag){
+    (model.addToDoTag(new_to_do_tag)) ? view.showSucsess('tag') : view.showFailure('tag');
+  }  
 }
 
 module.exports = Controller;
