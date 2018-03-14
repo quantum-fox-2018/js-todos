@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "status": "[ ]",
+    "task": "Cook Instant Noodle",
+    "createdAt": "2018-03-14T08:17:24.591Z",
+    "completedAt": "2018-03-14T08:17:24.591Z",
+    "tags": [
+      "cook",
+      "food",
+      "noodle"
+    ]
+  },
+  {
+    "id": 2,
+    "status": "[X]",
+    "task": "Wash My Car",
+    "createdAt": "2018-03-14T08:17:32.679Z",
+    "completedAt": "2018-03-14T09:06:49.046Z",
+    "tags": [
+      "wash",
+      "vehicle"
+    ]
+  },
+  {
+    "id": 3,
+    "status": "[ ]",
+    "task": "Wash My Clothes",
+    "createdAt": "2018-03-14T08:29:23.552Z",
+    "completedAt": "2018-03-14T09:08:57.284Z",
+    "tags": [
+      "wash",
+      "clothes",
+      "washing machine"
+    ]
+  },
+  {
+    "id": 4,
+    "status": "[X]",
+    "task": "Clean My House",
+    "createdAt": "2018-03-14T08:56:15.305Z",
+    "completedAt": "2018-03-14T09:06:56.414Z",
+    "tags": [
+      "clean",
+      "house",
+      "jerk",
+      "testing"
+    ]
+  },
+  {
+    "id": 5,
+    "status": "[ ]",
+    "task": "Sleep",
+    "createdAt": "2018-03-14T09:21:08.422Z",
+    "completedAt": "2018-03-14T09:21:08.422Z",
+    "tags": [
+      "bed",
+      "room"
+    ]
+  }
+]
