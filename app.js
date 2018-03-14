@@ -3,7 +3,11 @@ const argv = process.argv
 const ToDoModel = require('./ToDoModel')
 const ToDoView = require('./ToDoView')
 
-switch (argv[2]) {
+let rawCommand = argv[2].split(':')
+let command = rawCommand[0]
+let forFilter = rawCommand[1]
+
+switch (command) {
   case 'help': ToDoModel.help(); break;
   case 'list': ToDoModel.list(ToDoView.list); break;
   case 'add': ToDoModel.add(ToDoView.add); break;
@@ -13,8 +17,7 @@ switch (argv[2]) {
   case 'uncomplete': ToDoModel.uncomplete(ToDoView.uncomplete); break;
   case 'list:created': ToDoModel.listCreated(ToDoView.listCreated); break;
   case 'list:completed': ToDoModel.listCompleted(ToDoView.listCompleted); break;
+  case 'tag': ToDoModel.tags(ToDoView.tags); break;
+  case 'filter': ToDoModel.filter(forFilter,ToDoView.filter); break;
   default: console.log('default'); break;
 }
-// let data = fs.readFileSync('./todolist.json','utf8')
-// let read = JSON.parse(data)
-// console.log(read)

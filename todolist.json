@@ -1,38 +1,48 @@
 [
   {
-    "status": "[X]",
-    "task": "Sarapan",
-    "createdAt": "2018-03-14T06:56:32.532Z",
-    "completedAt": "2018-03-14T06:59:08.205Z"
-  },
-  {
+    "id": 1,
     "status": "[ ]",
-    "task": "Makan Siang",
-    "createdAt": "2018-03-14T06:56:43.093Z",
-    "completedAt": "2018-03-14T06:56:43.093Z"
+    "task": "Cook Instant Noodle",
+    "createdAt": "2018-03-14T08:17:24.591Z",
+    "completedAt": "2018-03-14T08:17:24.591Z",
+    "tags": [
+      "cook",
+      "food",
+      "noodle"
+    ]
   },
   {
+    "id": 2,
     "status": "[ ]",
-    "task": "Makan Malam",
-    "createdAt": "2018-03-14T06:56:49.364Z",
-    "completedAt": "2018-03-14T06:56:49.364Z"
+    "task": "Wash My Car",
+    "createdAt": "2018-03-14T08:17:32.679Z",
+    "completedAt": "2018-03-14T08:17:32.679Z",
+    "tags": [
+      "wash",
+      "vehicle"
+    ]
   },
   {
-    "status": "[X]",
-    "task": "Tidur",
-    "createdAt": "2018-03-14T06:57:17.841Z",
-    "completedAt": "2018-03-14T06:58:59.414Z"
-  },
-  {
+    "id": 3,
     "status": "[ ]",
-    "task": "Mandi",
-    "createdAt": "2018-03-14T06:57:25.184Z",
-    "completedAt": "2018-03-14T06:57:25.184Z"
+    "task": "Wash My Clothes",
+    "createdAt": "2018-03-14T08:29:23.552Z",
+    "completedAt": "2018-03-14T08:29:23.552Z",
+    "tags": [
+      "wash",
+      "clothes",
+      "washing machine"
+    ]
   },
   {
-    "status": "[X]",
-    "task": "Cuci Baju",
-    "createdAt": "2018-03-14T06:57:36.719Z",
-    "completedAt": "2018-03-14T06:59:13.476Z"
+    "id": 4,
+    "status": "[ ]",
+    "task": "Clean My House",
+    "createdAt": "2018-03-14T08:56:15.305Z",
+    "completedAt": "2018-03-14T08:56:15.305Z",
+    "tags": [
+      "clean",
+      "house"
+    ]
   }
 ]

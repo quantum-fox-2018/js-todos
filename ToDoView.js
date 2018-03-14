@@ -25,8 +25,8 @@ class ToDoView {
 
   static findById(num,input){
     for(let i=0; i<input.length; i++){
-      if((i+1).toString()==num){
-        console.log(`${num}. ${input[i].status} ${input[i].task}`)
+      if(input[i].id==num){
+        console.log(`${i+1}. ${input[i].status} ${input[i].task}`)
       }
     }
   }
@@ -64,6 +64,17 @@ class ToDoView {
       for(let i=input.length-1; i>=0; i--){
         console.log(`${i+1}. ${input[i].status} ${input[i].task}`);
       }
+    }
+  }
+
+  static tags(name,tags){
+    let result = tags.join(' ')
+    console.log(`Tagged task '${name}' with tags: ${result}`)
+  }
+
+  static filter(input){
+    for(let i=0; i<input.length; i++){
+      console.log(`${input[i].id}. ${input[i].task} [${input[i].tags}]`)
     }
   }
 }

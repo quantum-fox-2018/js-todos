@@ -13,10 +13,13 @@ class ToDoModel {
       callback(toDoList);
     })
   }
+
   static add(callback){
     fs.readFile('./todolist.json','utf8',(err,data) => {
       let toDoList = JSON.parse(data)
-      toDoList.push({status:'[ ]', task:argv[3], createdAt: new Date(), completedAt: new Date()})
+      let max = toDoList.length
+      toDoList.push({id:(max+1), status:'[ ]', task:argv[3], createdAt: new Date(),
+        completedAt: new Date(), tags:[]})
       let newToDoList = JSON.stringify(toDoList,null,2)
       fs.writeFile('./todolist.json',newToDoList,(err) => {
         if (err) throw err
@@ -123,6 +126,39 @@ class ToDoModel {
         }
       }
       callback(completedTask)
+    })
+  }
+
+  static tags(callback){
+    fs.readFile('./todolist.json','utf8',(err,data) => {
+      let toDoList = JSON.parse(data)
+      let tagsList = argv.slice(4)
+      for(let i=0; i<toDoList.length; i++){
+        if(toDoList[i].id.toString()==argv[3]){
+          var taskName = toDoList[i].task
+          toDoList[i].tags = tagsList
+        }
+      }
+      let newToDoList = JSON.stringify(toDoList,null,2)
+      fs.writeFile('./todolist.json',newToDoList,(err) => {
+        if (err) throw err
+        callback(taskName,tagsList)
+      })
+    })
+  }
+
+  static filter(input,callback){
+    fs.readFile('./todolist.json','utf8',(err,data) => {
+      let toDoList = JSON.parse(data)
+      let arrayOfTags = []
+      for(let i=0; i<toDoList.length; i++){
+        for(let j=0; j<toDoList[i].tags.length; j++){
+          if(toDoList[i].tags[j]==input){
+            arrayOfTags.push(toDoList[i])
+          }
+        }
+      }
+      callback(arrayOfTags)
     })
   }
 }
