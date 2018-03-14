@@ -24,5 +24,5 @@ class ViewTodo {
 
 }
 
-ViewTodo.viewList()
+// ViewTodo.viewList()
 module.exports = ViewTodo

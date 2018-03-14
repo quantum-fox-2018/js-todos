@@ -1,3 +1,6 @@
+const ViewTodo = require('./view.js')
+
+
 class ControllTodo {
     constructor() {
 
@@ -23,7 +26,7 @@ class ControllTodo {
                 break;
 
             case 'list':
-                console.log('menampilkan list')
+                ViewTodo.viewList()
                 break;
             
             case 'add':
