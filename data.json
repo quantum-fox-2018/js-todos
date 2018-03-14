@@ -1,1 +1,29 @@
-[]
+{
+  "todolist": [
+    {
+      "id": 1,
+      "content": "sarapan di rumah mba ike",
+      "complete": true
+    },
+    {
+      "id": 2,
+      "content": "jalan ke sekolah",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "content": "latihan ekskul band",
+      "complete": false
+    },
+    {
+      "id": 4,
+      "content": "beli hadiah buat adek",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "content": "suprise adek bareng bunda",
+      "complete": false
+    }
+  ]
+}
