@@ -125,16 +125,29 @@ class ToDoModel {
     fs.readFile('./todolist.json','utf8',(err,data) => {
       let toDoList = JSON.parse(data)
       let tagsList = argv.slice(4)
+      let tagsListFiltered = []
       for(let i=0; i<toDoList.length; i++){
         if(toDoList[i].id.toString()==argv[3]){
           var taskName = toDoList[i].task
-          toDoList[i].tags = tagsList
+          // toDoList[i].tags = tagsList
+          for(let m=0; m<tagsList.length; m++){
+            var count = 0
+            for(let c=0; c<toDoList[i].tags.length; c++){
+              if(tagsList[m]==toDoList[i].tags[c]){
+                count++
+              }
+            }
+            if(count==0){
+              toDoList[i].tags.push(tagsList[m])
+              tagsListFiltered.push(tagsList[m])
+            }
+          }
         }
       }
       let newToDoList = JSON.stringify(toDoList,null,2)
       fs.writeFile('./todolist.json',newToDoList,(err) => {
         if (err) throw err
-        callback(taskName,tagsList)
+        callback(taskName,tagsListFiltered)
       })
     })
   }

@@ -56,8 +56,12 @@ class ToDoView {
   }
 
   static tags(name,tags){
-    let result = tags.join(' ')
-    console.log(`Tagged task '${name}' with tags: ${result}`)
+    if(tags.length==0){
+      console.log(`No tags has tagged to task '${name}'`)
+    } else {
+      let result = tags.join(' ')
+      console.log(`Tagged task '${name}' with tags: ${result}`)
+    }
   }
 
   static filter(input){
