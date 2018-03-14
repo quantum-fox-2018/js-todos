@@ -1,1 +1,1 @@
-[]
+[{"id":1,"task":"satu ","status":false,"date":"2018-03-14T08:38:07.754Z","tag":["tag1","tag2","tag1","tag2"]},{"id":2,"task":"dua ","status":false,"date":"2018-03-14T08:38:11.655Z","tag":["tag1","tag2","tag1","tag2"]},{"id":3,"task":"tiga ","status":false,"date":"2018-03-14T08:38:13.408Z","tag":[]},{"id":4,"task":"empat ","status":false,"date":"2018-03-14T08:40:29.192Z","tag":[]},{"id":5,"task":"lima ","status":false,"date":"2018-03-14T08:40:44.023Z","tag":[]},{"id":6,"task":"lima","status":false,"date":"2018-03-14T08:41:32.126Z","tag":[]}]
