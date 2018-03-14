@@ -8,7 +8,7 @@ class Model{
   static addData(activity){
 
     let listData = Model.readData();
-    let newObject = {id:(parseInt(listData[listData.length-1].id)+1).toString(),activity:activity,status:" "};
+    let newObject = {id:(parseInt(listData[listData.length-1].id)+1).toString(),activity:activity,status:" ",date:new Date()};
     listData.push(newObject);
     Model.writeData(JSON.stringify(listData));
 
