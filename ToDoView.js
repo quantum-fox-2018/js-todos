@@ -32,7 +32,7 @@ class ToDoView {
   }
 
   static add(input){
-    console.log(`Data '${input}' telah dimasukkan ke dalam To Do List`);
+    console.log(`Added '${input}' to your To Do List`);
   }
 
   static findById(num,input){
@@ -44,15 +44,15 @@ class ToDoView {
   }
 
   static delete(input){
-    console.log(`Data '${input.task}' telah dihapus dari To Do List`)
+    console.log(`Deleted '${input.task}' from your To Do List`)
   }
 
   static complete(input){
-    console.log(`Data ke-${input} telah selesai dikerjakan`)
+    console.log(`Data ${input} is complete`)
   }
 
   static uncomplete(input){
-    console.log(`Data ke-${input} belum selesai!`)
+    console.log(`Data ${input} uncomplete`)
   }
 
   static tags(name,tags){
