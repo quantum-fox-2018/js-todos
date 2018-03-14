@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": 1,
+    "task": "Bikin Todo List",
+    "status": true,
+    "date": "2018-03-14T09:13:46.480Z"
+  },
+  {
+    "id": 2,
+    "task": "Masak Aer",
+    "status": true,
+    "date": "2018-03-14T09:13:53.501Z"
+  },
+  {
+    "id": 4,
+    "task": "Service HP",
+    "status": false,
+    "date": "2018-03-14T09:48:02.222Z"
+  },
+  {
+    "id": 5,
+    "task": "Jajan Batagor",
+    "status": false,
+    "date": "2018-03-14T09:58:27.163Z"
+  },
+  {
+    "id": 6,
+    "task": "Mancing di sungai",
+    "status": true,
+    "date": "2018-03-14T09:58:34.727Z"
+  }
+]
