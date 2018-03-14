@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "task_id": 1,
+    "status": "[ ]",
+    "task": "Bikin aplikasi"
+  },
+  {
+    "task_id": 2,
+    "status": "[ ]",
+    "task": "Main Node.js"
+  },
+  {
+    "task_id": 3,
+    "status": "[X]",
+    "task": "Main sama andrew"
+  },
+  {
+    "task_id": 4,
+    "status": "[ ]",
+    "task": "Main sama kang asep"
+  },
+  {
+    "task_id": 5,
+    "status": "[ ]",
+    "task": "Main sama orang lain"
+  }
+]
