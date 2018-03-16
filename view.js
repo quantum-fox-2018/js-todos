@@ -14,6 +14,14 @@ class View{
       console.log(data[i].id + ". " + data[i].todo);
     }
   }
+
+  static addToDo(data) {
+    console.log('Added ' + data.todo + ' to your TODO list...');
+  }
+
+  static showIdTask(idTask) {
+    console.log(idTask);
+  }
 }
 
 module.exports = View

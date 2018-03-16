@@ -10,6 +10,19 @@ class Controller {
     var data = Model.showList();
     View.showList(data);
   }
+
+  static addToDo(task) {
+    var newTask = {
+      todo: task
+    }
+    var task1 = Model.addTask(newTask);
+    View.addToDo(task1);
+  }
+
+  static findById(findId) {
+    var taskId = Model.findById(findId);
+    View.showIdTask(taskId);
+  }
 }
 
 module.exports = Controller
