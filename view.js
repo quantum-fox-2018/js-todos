@@ -20,7 +20,11 @@ class View{
   }
 
   static showIdTask(idTask) {
-    console.log(idTask);
+    console.log(idTask.id + idTask.todo);
+  }
+
+  static showDeletedTask(taskId) {
+    console.log('Deleted ' + taskId[0].todo + ' from your todo list');
   }
 }
 

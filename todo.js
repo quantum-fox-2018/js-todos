@@ -12,4 +12,6 @@ if(command === `help`) {
   Controller.addToDo(added);
 } else if(command === 'findById') {
   Controller.findById(added)
+} else if(command === 'delete') {
+  Controller.deleteTask(added)
 }

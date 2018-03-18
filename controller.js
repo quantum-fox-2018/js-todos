@@ -23,6 +23,11 @@ class Controller {
     var taskId = Model.findById(findId);
     View.showIdTask(taskId);
   }
+
+  static deleteTask(taskId) {
+    var deleteById = Model.deleteTask(taskId);
+    View.showDeletedTask(deleteById);
+  }
 }
 
 module.exports = Controller
